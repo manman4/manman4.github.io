@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>お問い合わせフォーム</title>
+</head>
+<body>
+  <h1>お問い合わせ</h1>
+  <form action="" method="post">
+    <input type="hidden" value="secret_data" />
+    <label>名前：<input type="text" name="login_name" /></label><br />
+    <label>パスワード：<input type="password" name="password" /></label>
+   <div>
+      <label>男<input type="radio" name="gender" value="man" /></label>
+      <label>女<input type="radio" name="gender" value="woman" /></label>
+    </div>
+   <div>
+      <p>ご用件を選んでください。</p>
+      <label>用件1<input type="checkbox" name="hobby" value="1" /></label>
+      <label>用件2<input type="checkbox" name="hobby" value="2" /></label>
+      <label>用件3<input type="checkbox" name="hobby" value="3" /></label>
+    </div>
+   <div>
+      <p>ご住所</p>
+      <select name="select1">
+        <option value="1">北海道</option>
+        <option value="2">東京都</option>
+        <option value="3">沖縄県</option>
+      </select>
+    </div>
+    <p>お問い合わせ内容を400字以内で記述してください。</p>
+      <textarea name="opinion" cols="40" rows="10" maxlength="400"
+        placeholder="ご意見を入力してください。"></textarea>
+    </div>
+    <input type="submit" value="送信" />
+  </form>
+</body>
+</html>
