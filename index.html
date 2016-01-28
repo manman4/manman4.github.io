@@ -1,77 +1,41 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <title>サンプルページ</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-    <div class="header">
-    <div class="menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+  <head>
+    <meta charset="utf-8" />
+    <title>萬山 | About</title>
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="selected">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="logo">
+        <img src="profile.jpg" alt="" />
+        <h1>萬山　星一</h1>
+      </div>
+    </header>
+    <div class="container">
+      <section>
+        <h2>About</h2>
+        <h3>自己紹介</h3>
+        <p>萬山 星一（日曜プログラマー）</p>
+        <p>兵庫県高砂市出身。経理の仕事をしています。</p>
+        <p>最近は、<span class="red">Ruby on Rails</span> を使って仕事をする機会が多くなりました。</p>
+        <p>私のポートフォリオを見て気になった方は、<a href="contact.html">Contact</a>よりご連絡お願い致します。</p>
+        <h3>リンク</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/tarokirameki" target="_blank">Facebook</a></li>
+          <li><a href="https://twitter.com/tarokirameki" target="_blank">Twitter</a></li>
+        </ul>
+      </section>
+      <footer>
+        <p>&copy; 2015 Taro Kirameki.</p>
+      </footer>
     </div>
-  </div>
-  <!-- コメントです。ページには表示されませんが、ソースで見れます。 -->
-  <div class="container">
-  <h1>HTMLの基礎</h1>
-  <h2>実験</h2>
-  <p>これからサンプルページで
-  <br />
-  <br />
-  <strong>実験</strong>
-  <br />
-  <br />
-  してみましょう。</p>
-  <hr />
-  <h2>登場人物</h2>
-  <p>煌木兄弟の年齢順です。</p>
-  <ol>
-    <li>煌木 太郎</li>
-    <li>煌木 次郎</li>
-    <li>煌木 花</li>
-  </ol>
-  
-  <table border="1">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>名前</th>
-        <th>メールアドレス</th>
-        <th>電話番号</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>1</th>
-        <td>煌木 太郎</td>
-        <td>taro.kirameki@example.com</td>
-        <td>09011112222</td>
-      </tr>
-      <tr>
-        <th>2</th>
-        <td>煌木 次郎</td>
-        <td>jiro.kirameki@example.com</td>
-        <td>09033334444</td>
-      </tr>
-      <tr>
-        <th>3</th>
-        <td>煌木 花子</td>
-        <td>hanako.kirameki@example.com</td>
-        <td>09055556666</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  <hr />
-　</div>
-　<div class="footer">
- 　　 <a href="https://techacademy.jp/" target="_blank">
-  　  <img src="logo-techacademy.png" alt="TechAcademy-logo" />
-   　</a>
-　</div>
-</body>
+  </body>
 </html>
