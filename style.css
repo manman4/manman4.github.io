@@ -62,11 +62,11 @@ nav a:hover { color: var(--text); }
 /* ── Hero ── */
 
 .hero {
-  min-height: 60vh;
+  min-height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6rem 2rem 4rem;
+  padding: 4rem 2rem 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -132,7 +132,7 @@ nav a:hover { color: var(--text); }
   color: var(--muted);
   font-size: 1.125rem;
   max-width: 480px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero-actions {
@@ -178,7 +178,7 @@ nav a:hover { color: var(--text); }
 
 /* ── OEIS Section ── */
 .oeis-section {
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -233,7 +233,7 @@ nav a:hover { color: var(--text); }
 /* ── Footer ── */
 footer {
   border-top: 1px solid var(--border);
-  padding: 2rem;
+  padding: 1rem 2rem;
   text-align: center;
   color: var(--muted);
   font-size: 0.8rem;

@@ -18,7 +18,7 @@ fetch('data/missing_numbers.csv')
     const dateStr = `${ts.slice(0,4)}-${ts.slice(4,6)}-${ts.slice(6,8)} ${ts.slice(9,11)}:${ts.slice(11,13)}:${ts.slice(13,15)}`;
     card.innerHTML = `
       <div class="oeis-meta">
-        <div>Updated: <span>${dateStr}</span></div>
+        <div>Updated: <span>${dateStr} JST</span></div>
         <div>Count: <span>${numbers.length}</span></div>
       </div>
       <div class="oeis-numbers">${numbers.join(', ')}</div>
