@@ -218,7 +218,7 @@ nav a:hover { color: var(--text); }
 
 .oeis-numbers {
   font-family: 'Courier New', monospace;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--muted);
   line-height: 1.8;
   word-break: break-all;
@@ -226,7 +226,7 @@ nav a:hover { color: var(--text); }
 
 .oeis-num {
   display: inline-block;
-  animation: wave-highlight 8s linear infinite;
+  animation: wave-highlight 16s linear infinite;
 }
 
 @keyframes wave-highlight {
