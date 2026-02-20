@@ -219,9 +219,19 @@ nav a:hover { color: var(--text); }
 .oeis-numbers {
   font-family: 'Courier New', monospace;
   font-size: 0.8rem;
-  color: var(--accent2);
+  color: var(--muted);
   line-height: 1.8;
   word-break: break-all;
+}
+
+.oeis-num {
+  display: inline-block;
+  animation: wave-highlight 8s linear infinite;
+}
+
+@keyframes wave-highlight {
+  0%, 44%, 56%, 100% { color: var(--muted); text-shadow: none; }
+  50% { color: var(--accent2); text-shadow: 0 0 8px rgba(63,185,80,0.7); }
 }
 
 .oeis-loading {

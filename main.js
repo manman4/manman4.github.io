@@ -21,7 +21,7 @@ fetch('data/missing_numbers.csv')
         <div>Updated: <span>${dateStr} JST</span></div>
         <div>Count: <span>${numbers.length}</span></div>
       </div>
-      <div class="oeis-numbers">${numbers.join(', ')}</div>
+      <div class="oeis-numbers">${numbers.map((n, i) => `<span class="oeis-num" style="animation-delay:${i * 0.15}s">${n.trim()}</span>`).join(', ')}</div>
     `;
   })
   .catch(() => {
