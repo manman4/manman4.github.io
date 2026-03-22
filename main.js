@@ -1,4 +1,4 @@
-fetch('data/missing_numbers.csv')
+fetch('data/missing_numbers.csv?v=' + Date.now())
   .then(res => res.text())
   .then(text => {
     const lines = text.trim().split('\n');
