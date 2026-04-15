@@ -185,7 +185,7 @@ nav a:hover { color: var(--text); }
 
 .section-label {
   font-family: 'Courier New', monospace;
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.1em;
