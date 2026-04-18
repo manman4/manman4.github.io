@@ -240,6 +240,21 @@ nav a:hover { color: var(--text); }
   font-family: 'Courier New', monospace;
 }
 
+.sloanesnote {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.sloanesnote code {
+  font-family: 'Courier New', monospace;
+  color: var(--accent2);
+}
+
+.sloanesnote a { color: var(--accent); text-decoration: none; }
+.sloanesnote a:hover { text-decoration: underline; }
+
 /* ── Footer ── */
 footer {
   border-top: 1px solid var(--border);

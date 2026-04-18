@@ -49,6 +49,14 @@
     <h2>Popular vs Unpopular Numbers</h2>
     <div class="oeis-card">
       <img src="data/sloanes_gap.png" alt="Sloane's Gap" style="width:100%;border-radius:4px;">
+      <p class="sloanesnote">
+        <strong>Note:</strong> <code>value_freq</code> is computed following the definition of N(n) in
+        "Sloane's Gap" (Gauvrit et al., <a href="https://arxiv.org/abs/1101.4470" target="_blank" rel="noopener">arXiv:1101.4470</a>)
+        — "the number of times n appears in the number file" — using per-sequence deduplication:
+        each sequence contributes at most 1 to N(n), regardless of how many times n appears within it.
+        This interpretation is supported by the observation that the value range in Figure 1 of the paper
+        does not exceed the total number of sequences.
+      </p>
     </div>
   </section>
 
