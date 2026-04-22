@@ -240,6 +240,12 @@ nav a:hover { color: var(--text); }
   font-family: 'Courier New', monospace;
 }
 
+.oeis-desc {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
 .sloanesnote {
   margin-top: 1rem;
   font-size: 0.8rem;
