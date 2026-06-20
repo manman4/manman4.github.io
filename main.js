@@ -1,4 +1,4 @@
-fetch('data/missing_numbers.csv?v=' + Date.now())
+fetch('data/missing_numbers.csv')
   .then(res => res.text())
   .then(text => {
     const lines = text.trim().split('\n');
@@ -52,8 +52,5 @@ fetch('data/missing_numbers.csv?v=' + Date.now())
     card.replaceChildren(numsDiv, metaDiv);
   })
   .catch(() => {
-    const p = document.createElement('p');
-    p.className = 'oeis-loading';
-    p.textContent = 'Failed to load data';
-    document.getElementById('oeis-card').replaceChildren(p);
+    // Keep the server-rendered fallback so the page stays useful to users and crawlers.
   });
