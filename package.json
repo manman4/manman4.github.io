@@ -1,0 +1,15 @@
+{
+  "name": "manman4-github-io",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "npm run build && node --test build/tests/*.test.js",
+    "check": "tsc --noEmit && tsc -p tsconfig.browser.json --noEmit",
+    "build": "tsc && tsc -p tsconfig.browser.json && node build/scripts/build.js",
+    "update:card": "tsc && node build/scripts/update_oeis_card.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}

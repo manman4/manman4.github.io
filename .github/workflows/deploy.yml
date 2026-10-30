@@ -5,6 +5,7 @@ on:
     branches: [main]
 
 permissions:
+  contents: read
   pages: write
   id-token: write
 
@@ -21,11 +22,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci --ignore-scripts
+
+      - run: npm test
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: 'dist'
 
       - uses: actions/deploy-pages@v4
         id: deployment

@@ -1,23 +1,23 @@
 fetch('data/missing_numbers.csv')
-  .then(res => res.text())
+  .then(res => {
+    if (!res.ok) throw new Error('Could not load CSV');
+    return res.text();
+  })
   .then(text => {
     const lines = text.trim().split('\n');
     let latestData = null;
     for (let i = lines.length - 1; i >= 0; i--) {
-      const line = lines[i].trim();
+      const line = lines[i]?.trim();
       if (line) { latestData = line; break; }
     }
     const card = document.getElementById('oeis-card');
-    if (!latestData) {
-      const p = document.createElement('p');
-      p.className = 'oeis-loading';
-      p.textContent = 'No data available';
-      card.replaceChildren(p);
-      return;
-    }
+    if (!card) return;
+    if (!latestData) return;
     const values = latestData.split(',');
     const ts = values[0];
-    const numbers = values.slice(1).filter(n => n.trim());
+    const numbers = values.slice(1).map(n => n.trim());
+    if (!ts || !/^\d{8}_\d{6}$/.test(ts) || numbers.length === 0 ||
+        numbers.some(n => !/^[1-9]\d*$/.test(n))) return;
     const dateStr = `${ts.slice(0,4)}-${ts.slice(4,6)}-${ts.slice(6,8)} ${ts.slice(9,11)}:${ts.slice(11,13)}:${ts.slice(13,15)}`;
 
     const numsDiv = document.createElement('div');
@@ -45,7 +45,7 @@ fetch('data/missing_numbers.csv')
     const countDiv = document.createElement('div');
     countDiv.textContent = 'Count: ';
     const countSpan = document.createElement('span');
-    countSpan.textContent = numbers.length;
+    countSpan.textContent = String(numbers.length);
     countDiv.appendChild(countSpan);
 
     metaDiv.append(updatedDiv, countDiv);
